@@ -4,13 +4,14 @@ import { Inc } from './slice/counterslice';
 
 export default function Counter() {
     
+  
     const count = useSelector(y=>y.counter);
     const dis = useDispatch();
 
     
 
     const inccremet = ()=>{
-        dis(Inc())
+        dis({type:'Counter_ASYC'})
     }
 
   return (
